@@ -1,0 +1,18 @@
+function inputRegistraSpesa() {
+  let descrizione = prompt("Inserisci la descrizione:");
+  let importo     = parseFloat(prompt("Inserisci l'importo:"));
+  let categoria   = prompt("Inserisci la categoria:");
+  let data        = prompt("Inserisci la data (es. 2024-03-15):");
+
+  registraSpesa(descrizione, importo, categoria, data);
+}
+
+
+function inputModificaSpesa() {
+  let id               = parseInt(prompt("Inserisci l'ID della spesa da modificare:"));
+  let nuovaDescrizione = prompt("Inserisci la nuova descrizione:");
+  let nuovoImporto     = parseFloat(prompt("Inserisci il nuovo importo:"));
+  let nuovaCategoria   = prompt("Inserisci la nuova categoria:");
+
+  modificaSpesa(id, nuovaDescrizione, nuovoImporto, nuovaCategoria);
+}
