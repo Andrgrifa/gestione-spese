@@ -1,0 +1,31 @@
+function calcolaTotalePerCategoria() {
+ 
+  let categorie = [];
+  let totali    = [];
+ 
+  for (let i = 0; i < spese.length; i++) {
+ 
+    let trovata = false;
+ 
+    for (let j = 0; j < categorie.length; j++) {
+ 
+      if (categorie[j] === spese[i].categoria) {
+        totali[j] = totali[j] + spese[i].importo;
+        trovata = true;
+      }
+ 
+    }
+ 
+    if (trovata === false) {
+      categorie.push(spese[i].categoria);
+      totali.push(spese[i].importo);
+    }
+ 
+  }
+ 
+  console.log("--- Totale per categoria ---");
+ 
+  for (let i = 0; i < categorie.length; i++) {
+    console.log(categorie[i] + ": " + totali[i] + " €");
+  }
+}
