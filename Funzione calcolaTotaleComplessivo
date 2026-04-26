@@ -1,0 +1,11 @@
+function calcolaTotaleComplessivo() {
+ 
+  let totale = 0;
+ 
+  for (let i = 0; i < spese.length; i++) {
+    totale = totale + spese[i].importo;
+  }
+ 
+  console.log("Totale complessivo: " + totale + " €");
+  return totale;
+}
