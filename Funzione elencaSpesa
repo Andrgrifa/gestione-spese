@@ -1,0 +1,19 @@
+function elencaSpese() {
+
+  if (spese.length === 0) {
+    console.log("Nessuna spesa registrata.");
+    return;
+  }
+
+  console.log("Elenco spese:");
+
+  for (let i = 0; i < spese.length; i++) {
+    console.log(
+      "ID: "             + spese[i].id          +
+      " Descrizione: " + spese[i].descrizione +
+      " Importo: "     + spese[i].importo     + " €" +
+      " Categoria: "   + spese[i].categoria   +
+      " Data: "        + spese[i].data
+    );
+  }
+}

@@ -1,0 +1,24 @@
+let nextId = 1;
+let spese = [];
+
+
+function registraSpesa(descrizione, importo, categoria, data) {
+
+  if (importo <= 0) {
+    console.log("Errore: l'importo deve essere positivo.");
+    return;
+  }
+
+  let nuovaSpesa = {
+    id:          nextId,
+    descrizione: descrizione,
+    importo:     importo,
+    categoria:   categoria,
+    data:        data
+  };
+
+  nextId = nextId + 1;
+  spese.push(nuovaSpesa);
+
+  console.log("Spesa registrata correttamente!");
+}
