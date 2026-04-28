@@ -1,5 +1,4 @@
 
-
 /**
  * @typedef {Object} Spesa
  * @property {number} id - Identificativo univoco della spesa.
