@@ -1,0 +1,27 @@
+function spesaMaggiore() {
+ 
+  if (spese.length === 0) {
+    console.log("Nessuna spesa registrata.");
+    return;
+  }
+ 
+  let max = spese[0];
+ 
+  for (let i = 1; i < spese.length; i++) {
+ 
+    if (spese[i].importo > max.importo) {
+      max = spese[i];
+    }
+ 
+  }
+ 
+  console.log(
+    "Spesa maggiore -> " +
+    "Descrizione: " + max.descrizione +
+    " | Importo: "  + max.importo     + " €" +
+    " | Categoria: "+ max.categoria   +
+    " | Data: "     + max.data
+  );
+ 
+  return max;
+}

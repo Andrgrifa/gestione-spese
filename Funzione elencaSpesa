@@ -5,6 +5,7 @@ function elencaSpese() {
     return;
   }
 
+<<<<<<< HEAD
   console.log("Elenco spese:");
 
   for (let i = 0; i < spese.length; i++) {
@@ -14,6 +15,17 @@ function elencaSpese() {
       " Importo: "     + spese[i].importo     + " €" +
       " Categoria: "   + spese[i].categoria   +
       " Data: "        + spese[i].data
+=======
+  console.log("--- Elenco spese ---");
+
+  for (let i = 0; i < spese.length; i++) {
+    console.log(
+      "ID: "          + spese[i].id          +
+      " | Descrizione: " + spese[i].descrizione +
+      " | Importo: "  + spese[i].importo     + " €" +
+      " | Categoria: "+ spese[i].categoria   +
+      " | Data: "     + spese[i].data
+>>>>>>> 0ec1a6b8b15d2f5f85d8d8526d02ff908a4ec9bd
     );
   }
 }

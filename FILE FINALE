@@ -1,27 +1,7 @@
-
-
-/**
- * @typedef {Object} Spesa
- * @property {number} id - Identificativo univoco della spesa.
- * @property {string} descrizione - Descrizione della spesa.
- * @property {number} importo - Importo in euro.
- * @property {string} categoria - Categoria della spesa.
- * @property {string} data - Data nel formato "YYYY-MM-DD".
- */
-
 let nextId = 1;
-
 let spese = [];
 
 
-/**
- * Registra una nuova spesa nell'elenco.
- * @param {string} descrizione - Descrizione della spesa.
- * @param {number} importo - Importo positivo in euro.
- * @param {string} categoria - Categoria della spesa.
- * @param {string} data - Data della spesa.
- * @returns {void}
- */
 function registraSpesa(descrizione, importo, categoria, data) {
 
     if (importo <= 0) {
@@ -43,14 +23,6 @@ function registraSpesa(descrizione, importo, categoria, data) {
 }
 
 
-/**
- * Modifica una spesa esistente cercandola tramite il suo ID.
- * @param {number} id - ID della spesa da modificare.
- * @param {string} nuovaDescrizione - Nuova descrizione.
- * @param {number} nuovoImporto - Nuovo importo.
- * @param {string} nuovaCategoria - Nuova categoria.
- * @returns {void}
- */
 function modificaSpesa(id, nuovaDescrizione, nuovoImporto, nuovaCategoria) {
 
     for (let i = 0; i < spese.length; i++) {
@@ -67,10 +39,6 @@ function modificaSpesa(id, nuovaDescrizione, nuovoImporto, nuovaCategoria) {
 }
 
 
-/**
- * Stampa l'elenco di tutte le spese registrate.
- * @returns {void}
- */
 function elencaSpese() {
 
     if (spese.length === 0) {
@@ -85,10 +53,6 @@ function elencaSpese() {
 }
 
 
-/**
- * Calcola e stampa la somma totale di tutte le spese.
- * @returns {number} Il totale complessivo in euro.
- */
 function calcolaTotaleComplessivo() {
 
     let totale = 0;
@@ -101,10 +65,6 @@ function calcolaTotaleComplessivo() {
 }
 
 
-/**
- * Calcola e stampa il totale delle spese suddiviso per categoria.
- * @returns {void}
- */
 function calcolaTotalePerCategoria() {
 
     let categorie = [];
@@ -132,10 +92,6 @@ function calcolaTotalePerCategoria() {
 }
 
 
-/**
- * Genera un report mensile delle spese di un mese e anno indicati dall'utente.
- * @returns {void}
- */
 function reportMensile() {
 
     let mese = prompt("Inserisci il mese (es. 03):");
@@ -157,10 +113,6 @@ function reportMensile() {
 }
 
 
-/**
- * Trova e stampa la spesa di importo maggiore.
- * @returns {Spesa|undefined} La spesa con importo più alto, oppure undefined se non ci sono spese.
- */
 function spesaMaggiore() {
 
     if (spese.length === 0) {
@@ -180,10 +132,6 @@ function spesaMaggiore() {
 }
 
 
-/**
- * Chiede i dati di una nuova spesa tramite prompt e la registra.
- * @returns {void}
- */
 function inputRegistraSpesa() {
     let descrizione = prompt("Descrizione:");
     let importo = parseFloat(prompt("Importo:"));
@@ -193,10 +141,6 @@ function inputRegistraSpesa() {
 }
 
 
-/**
- * Chiede i dati per modificare una spesa esistente e la modifica.
- * @returns {void}
- */
 function inputModificaSpesa() {
     let id = parseInt(prompt("ID della spesa da modificare:"));
     let nuovaDescrizione = prompt("Nuova descrizione:");
@@ -206,10 +150,6 @@ function inputModificaSpesa() {
 }
 
 
-/**
- * Mostra il menu principale e gestisce la scelta dell'utente.
- * @returns {void}
- */
 function menu() {
 
     let scelta = prompt(
